@@ -74,9 +74,8 @@ nav ul li a:hover::after {
 .header-text h1 span {
   color: rgb(158, 17, 17);
 }
-
-/* ------------ about me ------------ */
-
+/* ------ end of nav style ------ */
+/* ------ start of about me section ----- */
 .container {
   padding: 100px;
 }
@@ -110,21 +109,50 @@ nav ul li a:hover::after {
   font-weight: 600;
   color: #fff;
 }
-
-.tab-title {
+/* <------ start of tab titles ----> */
+.tab {
   display: flex;
   margin: 20px 0 40px;
+  overflow: hiddens;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-.tab-links {
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #cc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+/* .tab.container,
+#options {
   margin-right: 50px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
-}
-
-.tab-links::after {
+} */
+/* 
+.tablinks::after {
   content: "";
   width: 0;
   height: 3px;
@@ -135,24 +163,24 @@ nav ul li a:hover::after {
   transition: 0.5s;
 }
 
-.tab-links.active-link::after {
+.tablinks.active-link::after {
   width: 50%;
 }
 
-.tab-contents ul li {
+.tabcontent ul li {
   list-style: none;
   margin: 10px 0;
 }
 
-.tab-contents ul li span {
+.tabcontent ul li span {
   color: #bc1024;
   font-size: 14px;
 }
 
-.tab-contents {
+.tabcontent {
   display: none;
 }
 
-.tab-contents.active-tab {
+.tabcontent.active-tab {
   display: block;
-}
+} */

@@ -1,113 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jean's Portfolio</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
 
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="images/logo.png" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-text">
-          <p>UI/UX Designer</p>
-          <h1>
-            Hi, I'm <span>Jean Garcia</span> <br />
-            from New York City
-          </h1>
-        </div>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean's Portfolio</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
 
-    <!------------------------------ about me ------------------------------>
+<body>
+  <div id="header">
     <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/user.png" />
-        </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-            minima iste nihil aperiam alias cupiditate exercitationem sint,
-            molestias deleniti quia facilis saepe placeat? At, dicta veniam
-            nulla delectus atque perferendis.
-          </p>
-
-          <!--------------- Tabs Titles --------------->
-          <div class="tab-title">
-            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-            <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
-
-          </div>
-          <!--------------- Skills content --------------->
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
-              <li><span>Web Development</span><br />Web App Development</li>
-              <li>
-                <span>App Development</span><br />Building Android/iOS apps
-              </li>
-            </ul>
-          </div>
-          <!--------------- Experience content --------------->
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>2021 - Current</span><br />My Experience Here</li>
-              <li><span>2019 - 2021</span><br />My Experience Here</li>
-              <li>
-                <span>2017 - 2021</span><br/>My Experience Here </li>
-                <span>2016 - 2017</span><br/>My Experience Here
-              </li>
-            </ul>
-          </div>
-          <!--------------- Education content --------------->
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2021 - Current</span><br />My Education Here</li>
-              <li><span>2019 - 2021</span><br />My Education Here</li>
-              <li>
-                <span>2017 - 2021</span><br />My Education Here </li>
-                <span>2016 - 2017</span><br />My Education Here
-              </li>
-            </ul>
-          </div>
-        </div>
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>
+          Hi, I'm <span>Jean Garcia</span> <br />
+          from New York City
+        </h1>
       </div>
     </div>
-  </body>
+  </div>
 
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+  <!------------------------------ about me ------------------------------>
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/user.png" />
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
+          minima iste nihil aperiam alias cupiditate exercitationem sint,
+          molestias deleniti quia facilis saepe placeat? At, dicta veniam
+          nulla delectus atque perferendis.
+        </p>
 
-    function opentab(event, tabname) {
-      document.querySelector(".experience").innerHTML = document.querySelector("#experience")
-    }
-    //   for (tablink of tablinks) {
-    //     tablink.classList.remove("active-link");
-    //   }
-    //   for (tabcontent of tabcontents) {
-    //     tabcontent.classList.remove("active-tab");
-    //   }
-    //   event.currentTarget.classList.add("active-link");
-    //   document.getElementById(tabname).classList.add("active-tab");
-    // }
+        <!--------------- Tabs Titles --------------->
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
 
+          <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
 
-  </script> 
+          <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+        </div>
+
+        <!--------------- Skills content --------------->
+        <div id="skills" class="tabcontent">
+          <li><span>UI/UX</span>
+            <br />
+            Designing Web/App interfaces
+          </li>
+          <li><span>Web Development</span>
+            <br />
+            Web App Development
+          </li>
+          <li>
+            <span>App Development</span>
+            <br />
+            Building Android/iOS apps
+          </li>
+        </div>
+      </div>
+      <!--------------- Experience content --------------->
+      <div id="experience" class="tabcontent">
+        <ul>
+          <li><span>2021 - Current</span><br />My Experience Here</li>
+          <li><span>2019 - 2021</span><br />My Experience Here</li>
+          <li>
+            <span>2017 - 2021</span><br />My Experience Here
+          </li>
+          <span>2016 - 2017</span><br />My Experience Here
+          </li>
+        </ul>
+      </div>
+      <!--------------- Education content --------------->
+      <div id="education" class="tabcontent">
+        <ul>
+          <li><span>2021 - Current</span><br />My Education Here</li>
+          <li><span>2019 - 2021</span><br />My Education Here</li>
+          <li>
+            <span>2017 - 2021</span><br />My Education Here
+          </li>
+          <span>2016 - 2017</span><br />My Education Here
+          </li>
+        </ul>
+      </div>
+</body>
+
+<script src="javascript.js"></script>
 
 </html>
