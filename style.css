@@ -134,7 +134,7 @@ nav ul li a:hover::after {
 }
 
 .tab button.active {
-  background-color: #cc;
+  background-color: #ccc;
 }
 
 .tabcontent {
